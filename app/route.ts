@@ -1,3 +1,4 @@
 export async function GET() {
-    return Response.json({ "message": "hello world!" })
-  }
+    const res = await fetch("https://jsonplaceholder.typicode.com/todos")
+    return Response.json(await res.json())
+}
